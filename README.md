@@ -30,7 +30,7 @@ bash /tmp/skill-python/install.sh .
 
 ## O que tem dentro
 
-- **SKILL.md** — o contrato: 10 pisos inegociáveis + o mapa de references.
+- **SKILL.md** — o contrato: 11 pisos inegociáveis + o mapa de references.
 - **references/** — `escopo` (onde entra e onde é vetado; a forma da exceção), `piso` (`uv`/lock,
   `ruff`, tipos que travam, empacotamento, segurança, GIL), `dados-notebook` (notebook não é
   entregável; reprodutibilidade), `stack-versoes` (anexo volátil, com data).

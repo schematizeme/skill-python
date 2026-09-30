@@ -17,5 +17,8 @@
 9. **CPU-bound → processo** (GIL); nada de chamada bloqueante dentro de `async def`.
 10. **Notebook não é entregável:** sem saída, sem dado real, sem credencial; virou produto, virou
     módulo em `src/` com teste e tipo.
+11. **Orquestrador não desenvolve; subagent barato executa.** O agent principal só planeja, despacha e
+    revisa; ação onerosa vira micro-tasks para subagents em `sonnet` (falhou → o mesmo subagent corrige →
+    re-decompõe → só então `opus`, com motivo). Detalhe: `schematize-engineering` → `references/orquestracao.md` §9.
 
 Gate: `bash .claude/skills/schematize-python/scripts/check-python.sh .`

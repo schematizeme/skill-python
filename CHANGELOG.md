@@ -3,6 +3,16 @@
 Todas as mudanças relevantes deste pacote, no formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
 com versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.2.0] — 2026-09-30
+
+Pedido do dono, por **custo**: o orquestrador não desenvolve; ação onerosa vira micro-tasks baratas; `sonnet` é o default dos subagents e `opus` só entra após falha.
+
+### Adicionado
+- **Piso "Orquestrador não desenvolve; subagent barato executa"** no `assets/CLAUDE.md` e no `SKILL.md`: o agent principal só planeja, despacha e revisa; ação onerosa vira micro-tasks para subagents em `sonnet` (falhou → o mesmo subagent corrige → re-decompõe → só então `opus`, com motivo). Detalhe na base: `schematize-engineering` → `references/orquestracao.md` §9.
+
+### Mantido (piso inalterado)
+- Todos os pisos anteriores e o gate de `scripts/` seguem exatamente como estavam; a mudança é só de orquestração, não de código.
+
 ## [0.1.0] — 2026-08-21
 
 Primeira versão. Python **já estava na casa** — dados/ML, automação, o motor `simulated/run.py` que a `schematize-qa` distribui em 8 skills — e nunca tinha sido **decidido**. A vistoria de 2026-08-21 nomeou o desenho do problema: esse motor, *que a casa distribui e que tinha dois bugs reais achados na própria vistoria*, é Python sem governança; e `data` e `ai` pressupõem Python em toda parte **sem jamais dizê-lo**. Uso implícito é uso sem piso.
