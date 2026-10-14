@@ -3,9 +3,7 @@ name: schematize-python
 metadata:
   version: 0.3.1
 description: >-
-  Piso de Python como ferramenta (dados/ML, automação, ferramental), nunca serviço de produto novo. Use ao tocar
-  pyproject.toml, *.py ou notebooks: ruff, mypy --strict, pytest, uv, subprocess e pickle seguros. Traz CI e
-  ruff.toml.
+  Piso de Python como ferramenta (dados/ML, automação), nunca serviço novo. Use ao tocar pyproject.toml ou *.py: ruff, mypy --strict, pytest, uv, subprocess e pickle seguros.
 ---
 <!-- cross-skill: linguagens.md, efeitos-externos.md -> schematize-engineering -->
 
