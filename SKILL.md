@@ -4,8 +4,8 @@ metadata:
   version: 0.3.0
 description: >-
   Piso de Python como ferramenta (dados/ML, automação, ferramental), nunca serviço de produto novo. Use ao tocar
-  pyproject.toml, *.py ou notebooks: ruff, mypy --strict, pytest, uv, subprocess e pickle seguros, higiene de
-  notebook. Traz template de CI e ruff.toml.
+  pyproject.toml, *.py ou notebooks: ruff, mypy --strict, pytest, uv, subprocess e pickle seguros. Traz CI e
+  ruff.toml.
 ---
 <!-- cross-skill: linguagens.md, efeitos-externos.md -> schematize-engineering -->
 
