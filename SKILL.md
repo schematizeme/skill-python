@@ -2,7 +2,8 @@
 name: schematize-python
 metadata:
   version: 0.2.2
-description: O piso de PYTHON da casa — ferramenta com governança, não terra sem lei. Rege onde Python entra (dados/ML, automação, ferramental interno) e onde é **VETADO** (API/serviço de produto novo, exatamente como Node), com a forma da única exceção (servir modelo atrás de um serviço do rol, sem regra de negócio); `uv` com lockfile commitado (sem lock, "funciona na minha máquina" é literal); `ruff` como gate de lint E format; tipagem que TRAVA o CI, com catraca no legado e validação de fronteira em runtime por pydantic; empacotamento de ferramenta isolado (`uv tool`, nunca misturada ao app); segurança (pickle é execução de código, `shell=True`, `random` vs `secrets`, HTTP sem timeout); GIL e as três concorrências; e **notebook não é entregável** (a ordem de execução não é a ordem das células). Traz gate executável. Use SEMPRE que for escrever, revisar ou auditar `.py`/`.ipynb`.
+description: >-
+  Piso de Python da casa como ferramenta (dados/ML, automação, ferramental), nunca serviço de produto novo. Use ao tocar pyproject.toml, *.py ou notebooks: ruff, mypy --strict, pytest, uv e requires-python declarados, subprocess e pickle seguros, higiene de notebook. Traz template de CI e ruff.toml.
 ---
 <!-- cross-skill: linguagens.md, efeitos-externos.md -> schematize-engineering -->
 
@@ -13,6 +14,30 @@ até 2026-08-21 esse uso era **implícito**, e uso implícito é **uso sem piso*
 dois lados: **onde ele entra** e **onde é vetado**.
 
 **Versão:** skill `schematize-python` v0.2.2. Changelog em `CHANGELOG.md`.
+
+## Precedência e herança (leia antes de divergir)
+
+Esta skill é o recorte **Python** das linguagens **sancionadas fora do rol de backend** (`schematize-engineering` → `references/linguagens.md` §2.2 e §2.1): **ferramenta** — dados/ML, automação, ferramental; nunca serviço de produto novo.
+
+1. **Onde esta skill divergir da base, a BASE MANDA.** Aqui mora a especialização — a lib, o gate, a
+   sintaxe da linguagem. Divergência de *piso* é defeito desta skill, não variante local.
+2. **O que não está repetido aqui é HERDADO, não dispensado.** Valem integralmente, sem cópia local:
+   - **§28 Archive** — `<projeto>/<projeto>_archive/` é **repositório git próprio, PRIVADO e
+     obrigatório**, criticidade 0 (`schematize-archive`).
+   - **§35 Definition of Done** e a lista de anti-padrões (citada por **título**, nunca por número).
+   - **§39 Índice/MAPA** — enumeração exaustiva (uma entrada por unidade chamável, `M == N`) e grafo
+     com arestas em ASCII (`A -> B`), nunca a seta unicode.
+   - **IAM** (`schematize-engineering` → `references/iam.md`): identidade ≠ email, ≥2 fatores, ReBAC
+     multi-tenant, argon2id-only para senha nova, sessão longa e logout irreversível.
+   - **Efeito externo** nunca sai de não-produção (`schematize-engineering` →
+     `references/efeitos-externos.md`).
+   - **Orquestração** (`schematize-engineering` → `references/orquestracao.md` §9): o principal não
+     desenvolve; subagents `sonnet` por padrão, `opus` só após falha.
+3. **QA, ops, IAM e índice não têm comando próprio aqui:** vêm da base `/eng-*`. Para trabalho
+   contínuo use `/eng-overdev`; para planejar `/eng-plan`; para varrer a base `/eng-scan`; para
+   revisão geral `/eng-review` (e `/eng-ops`, `/eng-iam`, `/eng-index`). Os comandos
+   `/python-*` cobrem só o piso da linguagem.
+
 
 ## Por que ela nasceu
 
@@ -48,6 +73,8 @@ Mapa de references:
 | **Onde Python entra e onde é VETADO**; a forma da exceção (servir modelo); legado que já é backend | `references/escopo.md` |
 | **Notebook não é entregável**; reprodutibilidade de pipeline; armadilhas de pandas; fronteira com `data` e `ai` | `references/dados-notebook.md` |
 | Versões e ferramental (`uv`, `ruff`, `mypy`, `pytest`, `pydantic`), com data de verificação | `references/stack-versoes.md` |
+
+Assets prontos para copiar: `assets/ci/github-actions-ci.yml` (ruff, mypy --strict, pytest, pip-audit) · `assets/lint/ruff.toml`.
 
 ## Pisos inegociáveis (vetam o atalho)
 
