@@ -19,7 +19,7 @@ dois lados: **onde ele entra** e **onde é vetado**.
 
 ## Precedência e herança (leia antes de divergir)
 
-Esta skill é o recorte **Python** das linguagens **sancionadas fora do rol de backend** (`schematize-engineering` → `references/linguagens.md` §2.2 e §2.1): **ferramenta** — dados/ML, automação, ferramental; nunca serviço de produto novo.
+<!-- herdado:engineering/precedencia:foraRol intro="Esta skill é o recorte **Python** das linguagens **sancionadas fora do rol de backend** (`schematize-engineering` → `references/linguagens.md` §2.2 e §2.1): **ferramenta** — dados/ML, automação, ferramental; nunca serviço de produto novo." cmd="python" -->Esta skill é o recorte **Python** das linguagens **sancionadas fora do rol de backend** (`schematize-engineering` → `references/linguagens.md` §2.2 e §2.1): **ferramenta** — dados/ML, automação, ferramental; nunca serviço de produto novo.
 
 1. **Onde esta skill divergir da base, a BASE MANDA.** Aqui mora a especialização — a lib, o gate, a
    sintaxe da linguagem. Divergência de *piso* é defeito desta skill, não variante local.
@@ -38,8 +38,7 @@ Esta skill é o recorte **Python** das linguagens **sancionadas fora do rol de b
 3. **QA, ops, IAM e índice não têm comando próprio aqui:** vêm da base `/eng-*`. Para trabalho
    contínuo use `/eng-overdev`; para planejar `/eng-plan`; para varrer a base `/eng-scan`; para
    revisão geral `/eng-review` (e `/eng-ops`, `/eng-iam`, `/eng-index`). Os comandos
-   `/python-*` cobrem só o piso da linguagem.
-
+   `/python-*` cobrem só o piso da linguagem.<!-- /herdado -->
 
 ## Por que ela nasceu
 
