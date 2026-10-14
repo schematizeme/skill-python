@@ -1,7 +1,7 @@
 ---
 name: schematize-python
 metadata:
-  version: 0.2.2
+  version: 0.3.0
 description: >-
   Piso de Python como ferramenta (dados/ML, automação, ferramental), nunca serviço de produto novo. Use ao tocar
   pyproject.toml, *.py ou notebooks: ruff, mypy --strict, pytest, uv, subprocess e pickle seguros, higiene de
@@ -15,7 +15,7 @@ Python **está na casa e continua** — dados/ML, automação, ferramental. O qu
 até 2026-08-21 esse uso era **implícito**, e uso implícito é **uso sem piso**. Esta skill escreve os
 dois lados: **onde ele entra** e **onde é vetado**.
 
-**Versão:** skill `schematize-python` v0.2.2. Changelog em `CHANGELOG.md`.
+**Versão:** skill `schematize-python` v0.3.0. Changelog em `CHANGELOG.md`.
 
 ## Precedência e herança (leia antes de divergir)
 

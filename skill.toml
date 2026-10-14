@@ -3,7 +3,7 @@ name = "schematize-python"
 tag = "Linguagem · Python"
 status = "beta"
 order = 27
-current_version = "0.2.2"
+current_version = "0.3.0"
 href = "/python"
 
 [descriptions]
